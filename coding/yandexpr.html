@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My pianist path</title>
+
+
+    <style>
+
+        *{
+    padding: 0;
+    margin: 0; 
+    font-family: 'Montserrat', sans-serif;
+}
+html{   
+    scroll-behavior: smooth;
+}
+body{
+    background: #262626;
+
+}
+.container{
+    position: relative;
+    width: 100%;   
+}
+.container section{
+    position: relative;
+    width: 100%;  height: 100vh;
+    line-height: 10vh;
+    
+}
+
+
+.container section:nth-of-type(2n+1){
+   background: white; 
+}
+.container section:nth-of-type(2n){
+    background: white; 
+}
+
+
+.container ul{
+    position: fixed;
+    top: 0;  left: 0;
+    background: #fff;
+    width: 100%;  height: 60px;
+    z-index: 10;
+}
+.container ul li{
+    list-style: none;
+    width: calc(100% / 5);  height: 100%;
+    float: left;
+}
+.container ul li a{
+    display: inline-block;
+    width: 100%;  height: 100%;
+    text-align: center;  line-height: 60px;
+    text-decoration: none;  text-transform: uppercase;
+    color: #262626;
+}
+.container ul li a:hover{
+    background: #bdbdbd;
+   
+
+}
+
+
+  
+/* .p11 {
+    font-size: 50px;
+    padding: 30px;
+} 
+
+.img {
+    width: 300px;
+    height: 350px;
+    position:fixed;
+}*/
+
+.content {
+  display: flex;
+}
+
+.content img {
+    width: 600px;
+    height: 650px;
+    padding: 50px;
+
+  
+}
+
+.content h3,
+.content p {margin: 0;}
+
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    black 0%,
+    white 29%,
+    black 67%,
+    white 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 65px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+
+
+
+.button1, .button2 {
+ padding: 15px 25px;
+ border: unset;
+ border-radius: 15px;
+ color: #212121;
+ z-index: 1;
+ background: #e8e8e8;
+ position: relative;
+ font-weight: 1000;
+ font-size: 17px;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ transition: all 250ms;
+ overflow: hidden;
+}
+
+.button1::before, .button2::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 0;
+ border-radius: 15px;
+ background-color: #212121;
+ z-index: -1;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ transition: all 250ms
+}
+
+.button1:hover, .button2:hover  {
+ color: #e8e8e8;
+}
+
+.button1:hover::before, .button2:hover::before {
+ width: 100%;
+}
+.row {
+    padding: 200px;
+    text-align: center;
+}
+
+
+
+.exp {
+padding: 200px;
+float: right;
+}
+.fb {
+  float: left;
+  width: 400px;
+  height: 400px;
+  padding: 100px;
+  
+}
+
+.experience1 {
+  font-style: italic;
+}
+
+
+
+
+.section3 {
+  position: absolute;
+  padding: 100px;
+  margin: 100px;
+  
+ 
+}
+#rangeValue {
+  position: relative;
+  display: block;
+  text-align: center;
+  font-size: 6em;
+  color: black;
+  font-weight: 400;
+}
+.range {
+  width: 400px;
+  height: 15px;
+  -webkit-appearance: none;
+  background: #111;
+  outline: none;
+  border-radius: 15px;
+  overflow: hidden;
+  
+}
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #b4b4b4;
+  cursor: pointer;
+  border: 4px solid #333;
+  box-shadow: -410px 0 0 400px #838383;
+}
+
+.texts3 {
+  padding: 10px;
+}
+
+.sec3text {
+  padding: 200px;
+  
+
+  
+}
+
+.inner {
+    background: #acabab;
+    padding: 1em;
+    border-radius: 10px;
+    width: 250px;
+    clip-path: circle(10% at 90% 13%);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+  }
+  .inner:hover {
+    clip-path: circle(75%);
+    background: #acabab;
+  }
+  .inner span {
+    float: right;
+    color: white;
+    font-weight: bold;
+    transition: color 0.5s;
+    position: relative;
+    margin-right: 4%;
+  }
+  .inner:hover span {
+    color: rgba(255, 255, 255, 0);
+  }
+  .inner h1 {
+    color: black;
+    margin: 0;
+  }
+  .inner p {
+    color: white;
+    font-size: 0.8rem;
+  }
+  .containersec4{
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    line-height: 5vh;
+    float: right;
+    padding: 70px;
+  }
+
+
+
+  .inner2 {
+  background: #787878;
+  padding: 1em;
+  border-radius: 10px;
+  width: 250px;
+  clip-path: circle(10% at 90% 13%);
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+.inner2:hover {
+  clip-path: circle(75%);
+  background: #787878;
+}
+.inner2 span {
+  float: right;
+  color: white;
+  font-weight: bold;
+  transition: color 0.5s;
+  position: relative;
+  margin-right: 4%;
+}
+.inner2:hover span {
+  color: rgba(255, 255, 255, 0);
+}
+.inner2 h1 {
+  color: black;
+  margin: 0;
+}
+.inner2 p {
+  color: white;
+  font-size: 0.8rem;
+}
+
+.buttonon4 {
+  padding: 100px;
+  line-height: 50px;
+}
+
+.demo {
+  width: 250px;
+  height: 250px;
+  border: solid;
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+  background-color: white;
+}
+
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 100px;
+}
+
+.gap {
+  row-gap: 1rem;
+  column-gap: 1rem;
+}
+
+h1 {
+  text-align: center;
+  color: black;
+}
+
+.secc5 {
+  padding: 200px;
+}
+
+    </style>
+</head>
+    
+<body>
+
+<div class="container">
+    <ul>
+     <li><a href="#sec1">Main</a></li>
+     <li><a href="#sec2">my start</a></li>
+     <li><a href="#sec3">Now</a></li>
+     <li><a href="#sec4">future plans</a></li>
+     <li><a href="#sec5">my recordings</a></li>
+     </ul>
+    
+    <section id="sec1"> 
+        <!--<img src="pixeltrue-playing-piano-1.png " alt="playing piano"> 
+        <h1 class="p11">My pianist path</h1> -->
+
+        <div class="content">
+            <img src="pixeltrue-playing-piano-1.png">
+            <div class="container">
+                <div class="row">
+                  <div class="col-md-12 text-center">
+                    <h3 class="animate-charcter"> My pianist path </h3>
+                    <p class="by"> by issimbaeva alua </p>
+                    
+                  </div>
+                </div>
+              </div>
+            
+            
+          </div>
+        
+        </section>
+
+
+
+    <section id="sec2">
+
+<div class ="exp">
+<audio id="myAudio">
+  <source src="experience by alua.aac " >
+
+  Your browser does not support the audio element.
+</audio>
+
+
+<button onclick="playAudio()" type="button" class="button1">Play Audio</button>
+<button onclick="pauseAudio()" type="button" class="button2">Pause Audio</button> 
+
+<p class="experience1">"Experience - L.Einaudi"</p> <p> - is the first masterpiece that encouraged me to learn piano.
+  </p> <p>Click to the button to listen my performance.</p></div>
+<script>
+    var x = document.getElementById("myAudio"); 
+    
+    function playAudio() { 
+      x.play(); 
+    } 
+    
+    function pauseAudio() { 
+      x.pause(); 
+    } 
+    </script>
+   
+   <img class ="fb" src="experiiencee.jpg ">
+
+    </section>
+
+
+    <section id="sec3">
+      <div class="section3">
+      <span id="rangeValue">0</span>
+      <Input class="range" type="range" value="0" min="0" max="670" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)"></Input>
+  </div>
+  <div class="sec3text"><h1 class="texts3">- hours spent on piano till now</h1> 
+  <p>i started playing it on 22 oct. 2021. </p>
+
+  </div>
+  
+  
+  <script type="text/javascript">
+      function rangeSlide(value) {
+          document.getElementById('rangeValue').innerHTML = value;
+      }
+  </script>
+
+
+
+    </section>
+    <section id="sec4">
+
+      <div class="containersec4">
+        <div class="inner">
+          <span>i</span>
+          <h1>Video posting</h1>
+          <p> In the upcoming future, I would like to share my piano performances on platforms such as instagram, and tiktok to inspire others. </p>
+        </div>
+        <div class="container2sec4">
+          <div class="inner2">
+            <span>i</span>
+            <h1 class="hh">The hardest piano pieces</h1>
+            <p class="ppp"> I have a desire to learn the hardest piano songs from composers like Mozart, Chopin, and Tschaykovskiy in the future. </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="buttonon4">
+      <p class="secttioon4">click to the buttons to hear the "hardest" piano pieces.</p>
+      <a href="https://www.youtube.com/watch?v=Gus4dnQuiGk">
+        <button class="button1"> Chopin - Fantaisie-Impromptu (Op. 66)</button>
+        </a> <br>
+
+        <a href="https://www.youtube.com/watch?v=0-7UkgMunyk">
+          <button class="button1"> Vivaldi – Summer / The Four Seasons
+          </button>
+          </a> <br>
+
+          <a href=" https://www.youtube.com/watch?v=M93qXQWaBdE">
+            <button class="button1"> Flight of the Bumblebee - Rimsky-Korsakov
+            </button>
+            </a> <br>
+
+            <a href=" https://www.youtube.com/watch?v=BV7RkEL6oRc">
+              <button class="button1"> Beethoven - Moonlight Sonata (3rd Movement)
+              </button>
+              </a> <br>
+
+
+              <a href=" https://www.youtube.com/watch?v=Hf2MFBz4S_g">
+                <button class="button1"> Paganini/Liszt - La Campanella
+                </button>
+                </a> 
+      
+      </div>
+
+
+      
+
+
+    </section>
+    <section id="sec5">
+      <div class="secc5">
+      <h1>Those are my recordings of famous piano songs. </h1>
+      <div class="boxxxess">
+    
+        <div class="waiting demo">Comptine d'un Autre été <br>
+          <audio id="amelie audio">
+            <source src="comptine dune autre ete.aac" >
+          
+            Your browser does not support the audio element.
+          </audio>
+          <button onclick="playAudio()" type="button" class="button1">Play Audio</button>
+          <button onclick="pauseAudio()" type="button" class="button2">Pause Audio</button> 
+          
+         
+          <script>
+              var x = document.getElementById("amelie audio"); 
+              
+              function playAudio() { 
+                x.play(); 
+              } 
+              
+              function pauseAudio() { 
+                x.pause(); 
+              } 
+              </script>
+
+          
+        </div>
+        <div class="help demo">Victor's Solo piano <br>
+          <audio id="victor audio">
+            <source src="victorr solo piano by me.aac" >
+          
+            Your browser does not support the audio element.
+          </audio>
+          <button onclick="playAudio()" type="button" class="button1">Play Audio</button>
+          <button onclick="pauseAudio()" type="button" class="button2">Pause Audio</button> 
+          
+         
+          <script>
+              var x = document.getElementById("victor audio"); 
+              
+              function playAudio() { 
+                x.play(); 
+              } 
+              
+              function pauseAudio() { 
+                x.pause(); 
+              } 
+              </script>
+
+
+
+        </div>
+        <div class="crosshair demo">Fur Elise <br>
+          <audio id="elise audio">
+            <source src="fur elise by me.aac" >
+          
+            Your browser does not support the audio element.
+          </audio>
+          <button onclick="playAudio()" type="button" class="button1">Play Audio</button>
+          <button onclick="pauseAudio()" type="button" class="button2">Pause Audio</button> 
+          
+         
+          <script>
+              var x = document.getElementById("elise audio"); 
+              
+              function playAudio() { 
+                x.play(); 
+              } 
+              
+              function pauseAudio() { 
+                x.pause(); 
+              } 
+              </script>
+
+
+
+
+
+        </div>
+        <div class="grab demo">Intouchables <br>
+          <audio id="1+1 audio">
+            <source src="intouchables.aac" >
+          
+            Your browser does not support the audio element.
+          </audio>
+          <button onclick="playAudio()" type="button" class="button1">Play Audio</button>
+          <button onclick="pauseAudio()" type="button" class="button2">Pause Audio</button> 
+          
+         
+          <script>
+            var x = document.getElementById("1+1 audio"); 
+            
+            function playAudio() { 
+              x.play(); 
+            } 
+            
+            function pauseAudio() { 
+              x.pause(); 
+            } 
+            </script>
+
+
+        </div>
+    
+      </div>
+
+    </div>
+
+    </section>
+</div>
+    
+</body>
+</html>
